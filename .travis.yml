@@ -1,0 +1,13 @@
+language: node_js
+sudo: required
+node_js:
+  - "lts/*"
+script:
+  - yarn build && cd public
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local-dir: public
