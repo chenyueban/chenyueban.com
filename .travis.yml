@@ -3,7 +3,7 @@ sudo: required
 node_js:
   - "lts/*"
 script:
-  - yarn && yarn build && cd public
+  - yarn build && cd public
 deploy:
   provider: pages
   skip-cleanup: true
